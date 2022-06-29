@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+  <context:component-scan base-package="/one/src/main/java"></context:component-scan>
+  <bean id="customer" class="com.test.javaconfig">
+  <property name="customerId" value="1"></property>
+  <property name="customerName" value="barsa"></property>  
+  <property name="customerContact" value="182291"></property>  
+  <property name="customerAddress" value="blgr"></property>  
+  
+  
+  </bean>
+  
+  <bean id="adress" class="/one/src/main/java/com/test/javaconfig/Adress.java">
+  <constructor-arg  name="street" value="hdhd"></constructor-arg>
+  <constructor-arg name="city" value="mumbai"></constructor-arg>
+  <constructor-arg name="state" value="mumbai"></constructor-arg>
+  <constructor-arg name="zip" ref="123456"></constructor-arg>
+  <constructor-arg name="country" ref="india"></constructor-arg>
+  
+  </bean>
+
+</beans>
